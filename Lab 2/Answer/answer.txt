@@ -1,0 +1,17 @@
+Java không cho phép bạn làm điều này.
+
+Dưới đây là giải thích chi tiết về mặt kỹ thuật
+
+Nguyên lý Nạp chồng phương thức (Method Overloading) Trong Java, bạn có thể tạo nhiều hàm (bao gồm cả hàm tạo - constructor) có cùng tên, nhưng chúng bắt buộc phải khác nhau về Chữ ký phương thức (Method Signature).
+
+Chữ ký phương thức là gì Chữ ký của một hàm chỉ bao gồm tên hàm và danh sách các kiểu dữ liệusố lượng tham số truyền vào. Nó không quan tâm đến tên của biến.
+
+Áp dụng vào trường hợp của bạn
+
+Hàm tạo theo title có dạng public DigitalVideoDisc(String title). Chữ ký phương thức của nó là DigitalVideoDisc(String).
+
+Hàm tạo theo category có dạng public DigitalVideoDisc(String category). Chữ ký phương thức của nó cũng là DigitalVideoDisc(String).
+
+Nguyên nhân lỗi Vì cả hai hàm tạo đều chỉ nhận vào đúng một tham số có kiểu dữ liệu là String, nên chữ ký của chúng hoàn toàn giống hệt nhau. Trình biên dịch (Compiler) của Java sẽ coi đây là lỗi trùng lặp phương thức (Duplicate method). Cứ tưởng tượng, nếu bạn gõ lệnh new DigitalVideoDisc(Hành động), hệ thống sẽ không thể đoán được chữ Hành động đó là bạn đang muốn gán cho thuộc tính title hay category.
+
+Do đó, với những hàm tạo có cùng số lượng tham số và cùng kiểu dữ liệu truyền vào, bạn không thể khai báo chúng song song cùng lúc trong một class được.
