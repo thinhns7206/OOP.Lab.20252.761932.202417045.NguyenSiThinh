@@ -1,0 +1,11 @@
+1. Điều gì xảy ra nếu người dùng chọn "Cancel" (Hủy)?
+
+Đối với hộp thoại nhập liệu (JOptionPane.showInputDialog): Khi người dùng bấm nút "Cancel" hoặc bấm dấu 'X' để đóng hộp thoại, phương thức sẽ trả về giá trị null. Vì vậy nên chúng ta luôn phải kiểm tra điều kiện if (biến == null) trước khi chuyển đổi dữ liệu thành số để tránh lỗi sập chương trình (NullPointerException).
+
+Đối với hộp thoại xác nhận/tùy chọn (JOptionPane.showConfirmDialog hoặc showOptionDialog): Việc bấm "Cancel" sẽ trả về một hằng số nguyên đặc biệt mang tên JOptionPane.CANCEL_OPTION (có giá trị số là 2). Nếu người dùng tắt hộp thoại bằng dấu 'X' góc trên cùng, phương thức sẽ trả về JOptionPane.CLOSED_OPTION (có giá trị là -1).
+
+2. Làm thế nào để tùy chỉnh các nút lựa chọn cho người dùng (ví dụ: chỉ hiện "Yes" và "No", hoặc "I do" và "I don't")?
+
+Để tạo ra các nút bấm có tên theo ý muốn, bắt buộc phải sử dụng phương thức đa năng nhất là JOptionPane.showOptionDialog().
+
+Cách làm là bạn tạo một mảng (Array) chứa các chuỗi văn bản tương ứng với tên các nút bạn muốn hiển thị, sau đó truyền mảng này vào tham số options của phương thức trên.

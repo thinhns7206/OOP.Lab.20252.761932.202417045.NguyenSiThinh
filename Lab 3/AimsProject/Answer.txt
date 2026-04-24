@@ -1,0 +1,8 @@
+Java là một ngôn ngữ lập trình chỉ sử dụng cơ chế truyền tham số theo giá trị (pass by value).
+Trong Java, khi truyền tham số vào hàm (method), một bản sao của giá trị sẽ được tạo ra và sử dụng bên trong hàm đó. Điều này áp dụng cho cả hai trường hợp:
+
+Đối với kiểu dữ liệu nguyên thủy (int, double, boolean,...):
+→ Giá trị thực tế được sao chép và truyền vào hàm.
+Đối với đối tượng (object):
+→ Giá trị của biến tham chiếu (reference) được sao chép.
+→ Nghĩa là bản sao của địa chỉ trỏ đến đối tượng được truyền vào hàm, không phải chính đối tượng.

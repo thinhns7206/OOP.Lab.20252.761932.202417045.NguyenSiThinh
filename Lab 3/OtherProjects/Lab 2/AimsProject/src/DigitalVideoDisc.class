@@ -1,0 +1,73 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+public class DigitalVideoDisc {
+   private String title;
+   private String category;
+   private String director;
+   private int length;
+   private float cost;
+
+   public String getTitle() {
+      return this.title;
+   }
+
+   public void setTitle(String var1) {
+      this.title = var1;
+   }
+
+   public String getCategory() {
+      return this.category;
+   }
+
+   public void setCategory(String var1) {
+      this.category = var1;
+   }
+
+   public String getDirector() {
+      return this.director;
+   }
+
+   public void setDirector(String var1) {
+      this.director = var1;
+   }
+
+   public int getLength() {
+      return this.length;
+   }
+
+   public void setLength(int var1) {
+      this.length = var1;
+   }
+
+   public float getCost() {
+      return this.cost;
+   }
+
+   public void setCost(float var1) {
+      this.cost = var1;
+   }
+
+   public DigitalVideoDisc(String var1) {
+      this.title = var1;
+   }
+
+   public DigitalVideoDisc(String var1, String var2, float var3) {
+      this.category = var1;
+      this.title = var2;
+      this.cost = var3;
+   }
+
+   public DigitalVideoDisc(String var1, String var2, String var3, float var4) {
+      this.director = var1;
+      this.category = var2;
+      this.title = var3;
+      this.cost = var4;
+   }
+
+   public DigitalVideoDisc(String var1, String var2, String var3, int var4, float var5) {
+      this.title = var1;
+      this.category = var2;
+      this.director = var3;
+      this.length = var4;
+      this.cost = var5;
+   }
+}
